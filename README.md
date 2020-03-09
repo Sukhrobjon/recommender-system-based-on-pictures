@@ -1,64 +1,33 @@
 # Recommender System Based on Image
 
 ## Description
-
-- In this project I developed a method to idenditify the products similar visually similar. 
-
-### Installing
-
-Install all dependencies
-
-```
-npm install
-```
-
-Create .env file
-
-```
-touch .env
-```
-
-Add secret key to .env
-
-```
-SECRET = ???
-```
-
-Running it on your local machine
-```
-npm run
-```
-
-## What It is
-The Soccer API is a RESTful API that stores all available soccer leagues, teams and players. I am still working on creating the database that can host all data. For the sake of testing I have added some data. The project is fully authenticated, you can create an account. In the future user can create their own fantazy team, right now I am working on how to verify user input. Check out the live deployment [here](https://soccer-api-sg.herokuapp.com/). 
+* In this project I developed a method for identifiying the similar products visually. The taks was implementing an algorithm to find k most similar images to given(original) product and display it to user.
 
 
-## How to use it
-There are **three** nested resources: leagues, teams, and players. The resources are one to many relationship based.*For example:* There are multiple leagues, one leagues has many teams, one team has many players. You can read full documentation [here](https://sukhrobjon.github.io/Soccer-API/)
+## How to use
+* Please refer to this [file](recommend_similar_products.ipynb) as a source code.
 
+## Data
+* The main dataset is 2184 color images (150x150x3) with 7 brands and 10 products, and the file with labels style.csv. Photo files are in the .png format and the labels are integers and values. It is downloaded from [kaggle](https://www.kaggle.com/olgabelitskaya/style-color-images). 
 
- 
 ## Built With
 
-* [Node](https://nodejs.org/en/) - JavaScript run-time environment
-* [Express](https://expressjs.com/) - Web application framework
-* [Bootstrap](https://getbootstrap.com/) - Web framework
-* [Npm](https://www.npmjs.com/) - Dependency management
-* [Json Web Tokens](https://jwt.io/) - Encryption
-* [MongoDB](https://www.mongodb.com/) - Document based database
+* [VGG16](https://keras.io/applications/#vgg16) - Transfer Learning
+* [Cosine Similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) - Similarity Metric
+
 
 ## Authors
 
 * **Sukhrobjon Golibboev** - *Initial work* - [Sukhrobjon](https://github.com/Sukhrobjon)
 
-See also the list of [contributors](https://github.com/Sukhrobjon/Soccer-API/graphs/contributors) who participated in this project.
-
 ## License
 
-This project is licenced under the MIT License - see the <a href="https://github.com/Sukhrobjon/Soccer-API/blob/master/LICENSE">LICENSE</a> file for details
+This project is licenced under the MIT License - see the <a href="https://github.com/Sukhrobjon/recommender-system-based-on-pictures/blob/master/LICENSE">LICENSE</a> file for details
 
 ## Acknowledgments
 
-* Thanks to [Blackrock Digital](https://github.com/BlackrockDigital) for the styling template.
-* Thanks to Backend Intructor - [Dani](https://github.com/droxey)
-* Thanks to Connor - [Coswold](https://github.com/Coswold)
+* Thanks to my Advisor - [Milad](https://github.com/miladtoutounchian)
+
+
+## Note
+- Project is under development status. Wait for more!
